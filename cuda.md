@@ -1,5 +1,7 @@
 # CUDA, CuDNN and OpenCV 3 with Ubuntu 16.04
 
+
+## Install the necessary pre-requisites
 ```shell
 
 sudo apt-get update
@@ -29,13 +31,14 @@ sudo apt-get install -y python3-numpy python3-scipy
 
 ```
 
+
 ## Install Anaconda (Optional)
 Download and install Anaconda with appropriate python version. 
 [https://www.continuum.io/downloads](https://www.continuum.io/downloads)
 
 
 ## Install CUDA
-Download CUDA Toolkit for your system configuration (instructions are for `.deb` file)
+Download CUDA Toolkit for your system configuration (download the `deb` file)
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
 Follow these commands to install CUDA
