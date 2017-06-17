@@ -24,24 +24,46 @@ sudo apt-get install -y python-dev
 sudo apt-get install -y python-numpy python-scipy
 
 # (or, Python 3.5 development files)
-# sudo apt-get install -y python3-dev
-# sudo apt-get install -y python3-numpy python3-scipy
+sudo apt-get install -y python3-dev
+sudo apt-get install -y python3-numpy python3-scipy
 
 ```
 
+## Install Anaconda (Optional)
+Download and install Anaconda with appropriate python version. 
+[https://www.continuum.io/downloads](https://www.continuum.io/downloads)
+
+
+## Install CUDA
+Download CUDA Toolkit for your system configuration (instructions are for `.deb` file)
+[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+
+Follow these commands to install CUDA
+```Shell
+sudo dpkg -i path/to/cuda
+sudo apt-get update
+sudo apt-get install cuda
+```
+
+Add path to CUDA and CUDA libraries to bashrc (environment variables)
+`gedit ~/.bashrc`
+Add these lines to bashrc file
+```
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}} 
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\ 
+{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+Verify Installation by installing CUDA samples:
+```
+cuda-install-samples-8.0.sh ~
+cd ~/NVIDIA_CUDA-8.0_Samples/5_Simulations/nbody
+make
+./nbody
+```
 
 
 ## OpenCV 3
-In Ubuntu 16.04, install the dependencies first and then build the OpenCV 3.2 from source. 
+Use the following link to install OpenCV 3: [https://github.com/BVLC/caffe/wiki/OpenCV-3.2-Installation-Guide-on-Ubuntu-16.04](https://github.com/BVLC/caffe/wiki/OpenCV-3.2-Installation-Guide-on-Ubuntu-16.04)
 
-```
-sudo apt-get install --assume-yes build-essential cmake git
-sudo apt-get install --assume-yes pkg-config unzip ffmpeg qtbase5-dev python-dev python3-dev python-numpy python3-numpy
-sudo apt-get install --assume-yes libopencv-dev libgtk-3-dev libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev
-sudo apt-get install --assume-yes libavcodec-dev libavformat-dev libswscale-dev libxine2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
-sudo apt-get install --assume-yes libv4l-dev libtbb-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev
-sudo apt-get install --assume-yes libvorbis-dev libxvidcore-dev v4l-utils python-vtk
-sudo apt-get install --assume-yes liblapacke-dev libopenblas-dev checkinstall
-sudo apt-get install --assume-yes libgdal-dev
-```
-
+## 
