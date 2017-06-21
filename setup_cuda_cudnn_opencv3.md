@@ -72,7 +72,13 @@ make
 ## CuDNN 
 
 Download CuDNN (You might have to creat a login) [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
-
+Extract the files and copy the contents of `include` and `lib64` directories into the respective `cuda` folder in `/usr/local/`.
+You can refer to these commands.
+```
+sudo cp -P ~/Downloads/cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp -P ~/Downloads/cuda/lib64/* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+```
 
 ## OpenCV 3.1
 
@@ -104,5 +110,3 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_CUD
 make -j $(($(nproc) + 1))
 sudo make install
 ```
-
-## 
