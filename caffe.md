@@ -2,7 +2,7 @@
 
 First Set up Nvidia Drivers, CUDA 8, CuDNN and OpenCV (optional) with Ubuntu 16.04. You can follow these [instructions](https://github.com/sakthi-s/Installation-Instructions/blob/master/setup_cuda_cudnn_opencv3.md).
 
-Once you've successfully completely the above steps, you can move on to building Caffe.
+Once you've successfully completed the above steps, you can move on to building Caffe.
 
 ## Install the required dependencies
 ```
