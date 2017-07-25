@@ -8,6 +8,8 @@ Once you've successfully completed the above steps, you can move on to building 
 ```
 sudo apt-get update
 sudo apt-get upgrade -y
+sudo pip install protobuf
+sudo pip install -U scikit-image
 sudo apt-get install -y opencl-headers build-essential protobuf-compiler \
     libprotoc-dev libboost-all-dev libleveldb-dev hdf5-tools libhdf5-serial-dev \
     libopencv-core-dev  libopencv-highgui-dev libsnappy-dev \
