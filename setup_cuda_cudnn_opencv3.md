@@ -56,8 +56,8 @@ Add path to CUDA and CUDA libraries to bashrc (environment variables)
 Add these lines to bashrc file
 ```
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}} 
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\ 
-{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\
+${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 Verify Installation by installing CUDA samples:
